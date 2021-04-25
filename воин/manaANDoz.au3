@@ -12,12 +12,12 @@ While 1; Цикл программы
 		ToolTip("", 0, 0)
 		$cordXP=PixelSearch(244, 76, 217, 78, 0x38372C, 50, 1); проверка ОЗ
 		if Not @error Then
-			Send("{F1}")
+			Send("9")
 		EndIf
 		Sleep(150)
 		$cordMP=PixelSearch(220, 92, 210, 94, 0x38372C, 50, 1); проверка Маны
 		if Not @error Then
-			Send("{F2}")
+			Send("0")
 		EndIf
 		Sleep(150)
 	EndIf
