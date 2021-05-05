@@ -1,14 +1,14 @@
 ;------------ЕДЕНИЧКА сундучки, купоны, бонусы
 Global $paused
-HotKeySet("{PAUSE}", "Pause")
-HotKeySet("{END}","stop"); stop - ESC
+HotKeySet("{PAUSE}", "Pause"); пауза PAUSE
+HotKeySet("{END}","stop"); выход - END
 
 Sleep (2000)
 
-While 1
+While 1; код нажатие на скил 1
 	If $paused Then
 		ToolTip("", 0, 0)
-		$DelayKey = Random(200, 300, 1)
+		$DelayKey = Random(250, 400, 1)
 		AutoItSetOption("SendKeyDownDelay", $DelayKey)
 		AutoItSetOption("SendKeyDelay", $DelayKey)
 		Send("1")
@@ -20,11 +20,11 @@ While 1
 	Sleep(50)
 WEnd
 
-Func Pause()
+Func Pause(); функция пауза
 	$paused = Not $paused
 	Return $paused
 EndFunc
 
-Func stop(); stop
+Func stop(); вынкция выход
     Exit
 EndFunc
